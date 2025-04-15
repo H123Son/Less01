@@ -1,9 +1,8 @@
-﻿internal class Program
+﻿internal class Hieu2So
 {
-    private static void Main(string[] args)
+    private static void Mainx(string[] args)
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        // tổng hai số
 
         var inputFromKeybỏad = "";
         while (true)
@@ -42,8 +41,8 @@
                     }
                 }
 
-                int sum = a + heSoThu2;
-                Console.Write($"Tong hai so: {sum}");
+                int sub = a - heSoThu2;
+                Console.Write($"Hieu hai so: {sub}");
                 break;
             }
             else
@@ -54,5 +53,4 @@
 
         }
     }
-
 }

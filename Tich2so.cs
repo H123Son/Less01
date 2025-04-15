@@ -1,9 +1,8 @@
-﻿internal class Program2
+﻿internal class Tich2So
 {
-    private static void Main(string[] args)
+    private static void Main1(string[] args)
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        // tổng hai số
 
         var inputFromKeybỏad = "";
         while (true)
@@ -42,8 +41,8 @@
                     }
                 }
 
-                int sum = a + heSoThu2;
-                Console.Write($"Tong hai so: {sum}");
+                int multi = a * heSoThu2;
+                Console.Write($"Tich hai so: {multi}");
                 break;
             }
             else
@@ -52,41 +51,6 @@
                 continue;
             }
 
-        }
-    }
-
-    internal static void giaiPTBac2(int a, int b, int c)
-    {
-        if (a == 0)
-        {
-            if (b == 0)
-            {
-                Console.WriteLine("Phương trình này vô nghiệm.");
-            }
-            else
-            {
-                double nghiem = (double)-c / b;
-                Console.WriteLine($"Phương trình có 1 nghiệm.x = {nghiem.ToString("0.##")}.");
-            }
-        }
-        else
-        {
-            double delta = b * b - 4 * a * c;
-            if (delta < 0)
-            {
-                Console.WriteLine("Phương trình này vô nghiệm.");
-            }
-            else if (delta == 0)
-            {
-                double x = -b / (2 * a);
-                Console.WriteLine($"Phương trình có nghiệm kép x1 = x2 = {x.ToString("0.##")}");
-            }
-            else
-            {
-                double x1 = (-b + Math.Sqrt(delta)) / (2 * a);
-                double x2 = (-b - Math.Sqrt(delta)) / (2 * a);
-                Console.WriteLine($"Phương trình có hai nghiệm phân biệt: x1 = {x1.ToString("0.##")}, x2 = {x2.ToString("0.##")}");
-            }
         }
     }
 }
