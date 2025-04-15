@@ -1,6 +1,8 @@
-﻿internal class Hieu2So
+﻿using System;
+
+public class Hieu2So
 {
-    private static void Mainx(string[] args)
+    public  void Mainx()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
@@ -14,10 +16,10 @@
                 Console.Write("Ko dc bo trong khi nhap");
                 continue;
             }
-            if (int.TryParse(inputFromKeybỏad, out int a))
+            if (int.TryParse(inputFromKeybỏad, out int soThuNhat))
             {
                 int heSoThu1 = Convert.ToInt32(inputFromKeybỏad);
-                int heSoThu2;
+                int soThu2;
                 while (true)
                 {
                     Console.Write("Nhap he so b: ");
@@ -31,7 +33,7 @@
 
                     if (long.TryParse(inputFromKeybỏad, out long heSoThu2Value) && heSoThu2Value <= int.MaxValue && heSoThu2Value >= int.MinValue)
                     {
-                        heSoThu2 = (int) heSoThu2Value;
+                        soThu2 = (int) heSoThu2Value;
                         break;
                     }
                     else
@@ -41,7 +43,7 @@
                     }
                 }
 
-                int sub = a - heSoThu2;
+                int sub = soThuNhat - soThu2;
                 Console.Write($"Hieu hai so: {sub}");
                 break;
             }
