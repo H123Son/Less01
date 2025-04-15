@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppDemo
+namespace ConsoleApp01
 {
-    internal class Program
+    public class TongHaiSo
     {
-    private static void Main(string[] args)
+        public void TongHaiSo_Main()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             // tổng hai số
@@ -40,7 +40,7 @@ namespace ConsoleAppDemo
 
                         if (long.TryParse(inputFromKeybỏad, out long heSoThu2Value) && heSoThu2Value <= int.MaxValue && heSoThu2Value >= int.MinValue)
                         {
-                        heSoThu2 = (int) heSoThu2Value;
+                            heSoThu2 = (int)heSoThu2Value;
                             break;
                         }
                         else
@@ -61,18 +61,6 @@ namespace ConsoleAppDemo
                 }
 
             }
-        }
-
-
-        static void Main(string[] args)
-        {
-            //var tongHaiSo = new TongHaiSo();
-            //tongHaiSo.TongHaiSo_Main();
-
-            //var hieuHaiSo = new Hieu2So();
-            //hieuHaiSo.Mainx();
-
-            TongHaiSo_Main();
         }
     }
 }

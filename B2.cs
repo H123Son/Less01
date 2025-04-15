@@ -1,6 +1,8 @@
-﻿internal class Program2
+﻿using System;
+
+internal class Program2
 {
-    private static void Main2(string[] args)
+    private static void Main(string[] args)
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         // tổng hai số
