@@ -1,12 +1,10 @@
 ﻿using System;
 
-internal class Program2
+public class BT2
 {
-    private static void Main(string[] args)
+    public void PTB1()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        // tổng hai số
-
         var inputFromKeybỏad = "";
         while (true)
         {
@@ -17,9 +15,8 @@ internal class Program2
                 Console.Write("Ko dc bo trong khi nhap");
                 continue;
             }
-            if (int.TryParse(inputFromKeybỏad, out int a))
+            if (int.TryParse(inputFromKeybỏad, out int heSoThuNhat))
             {
-                int heSoThu1 = Convert.ToInt32(inputFromKeybỏad);
                 int heSoThu2;
                 while (true)
                 {
@@ -34,7 +31,7 @@ internal class Program2
 
                     if (long.TryParse(inputFromKeybỏad, out long heSoThu2Value) && heSoThu2Value <= int.MaxValue && heSoThu2Value >= int.MinValue)
                     {
-                        heSoThu2 = (int) heSoThu2Value;
+                        heSoThu2 = (int)heSoThu2Value;
                         break;
                     }
                     else
@@ -44,8 +41,7 @@ internal class Program2
                     }
                 }
 
-                int sum = a + heSoThu2;
-                Console.Write($"Tong hai so: {sum}");
+                giaiPTBacNhat(heSoThuNhat, heSoThu2);
                 break;
             }
             else
@@ -54,6 +50,99 @@ internal class Program2
                 continue;
             }
 
+        }
+    }
+
+
+    public void PTB2()
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        var inputFromKeybỏad = "";
+        while (true)
+        {
+            Console.Write(" Nhap he so a: ");
+            inputFromKeybỏad = Console.ReadLine();
+            if (string.IsNullOrEmpty(inputFromKeybỏad))
+            {
+                Console.Write("Ko dc bo trong khi nhap");
+                continue;
+            }
+            if (int.TryParse(inputFromKeybỏad, out int heSoThuNhat))
+            {
+                int heSoThu2, heSoThu3;
+                while (true)
+                {
+                    Console.Write("Nhap he so b: ");
+                    inputFromKeybỏad = Console.ReadLine();
+
+                    if (string.IsNullOrEmpty(inputFromKeybỏad))
+                    {
+                        Console.WriteLine("Ko dc bo trong khi nhap ");
+                        continue;
+                    }
+
+                    if (long.TryParse(inputFromKeybỏad, out long heSoThu2Value) && heSoThu2Value <= int.MaxValue && heSoThu2Value >= int.MinValue)
+                    {
+                        heSoThu2 = (int)heSoThu2Value;
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Gia tri nhap vao khong hop le. Vui long nhap gia tri <=  2,147,483,647 & >= -2,147,483,648");
+                        continue;
+                    }
+                }
+
+                while (true)
+                {
+                    Console.Write("Nhap he so c: ");
+                    inputFromKeybỏad = Console.ReadLine();
+                    if (string.IsNullOrEmpty(inputFromKeybỏad))
+                    {
+                        Console.WriteLine("Ko dc bo trong khi nhap ");
+                        continue;
+                    }
+                    if (long.TryParse(inputFromKeybỏad, out long heSoThu3Value) && heSoThu3Value <= int.MaxValue && heSoThu3Value >= int.MinValue)
+                    {
+                         heSoThu3 = (int)heSoThu3Value;
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Gia tri nhap vao khong hop le. Vui long nhap gia tri <=  2,147,483,647 & >= -2,147,483,648");
+                        continue;
+                    }
+                }
+
+                giaiPTBac2(heSoThuNhat, heSoThu2, heSoThu3);
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Gia tri nhap vao khong hop le. Vui long nhap gia tri so <= 2,147,483,647 & >= -2,147,483,648 ");
+                continue;
+            }
+
+        }
+    }
+
+    private void giaiPTBacNhat(int heSoThuNhat, int heSoThu2)
+    {
+        if (heSoThuNhat == 0)
+        {
+            if (heSoThu2 == 0)
+            {
+                Console.WriteLine("Phương trình này có vô số nghiệm.");
+            }
+            else
+            {
+                Console.WriteLine("Phương trình này vô nghiệm.");
+            }
+        }
+        else
+        {
+            double nghiem = (double)-heSoThu2 / heSoThuNhat;
+            Console.WriteLine($"Phương trình có nghiệm.x = {nghiem.ToString("0.##")}");
         }
     }
 

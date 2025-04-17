@@ -47,6 +47,8 @@
       <Link>Hieu2So.cs</Link>
     </Compile>
     <Compile Include="B2.cs" />
+    <Compile Include="B3.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tich2So.cs" />
     <Compile Include="TongHaiSo.cs" />

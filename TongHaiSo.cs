@@ -16,20 +16,19 @@ namespace ConsoleApp01
             var inputFromKeybỏad = "";
             while (true)
             {
-                Console.Write(" Nhap he so a: ");
+                Console.Write(" Nhap so thu nhat: ");
                 inputFromKeybỏad = Console.ReadLine();
                 if (string.IsNullOrEmpty(inputFromKeybỏad))
                 {
                     Console.Write("Ko dc bo trong khi nhap");
                     continue;
                 }
-                if (int.TryParse(inputFromKeybỏad, out int a))
+                if (int.TryParse(inputFromKeybỏad, out int soThuNhat))
                 {
-                    int heSoThu1 = Convert.ToInt32(inputFromKeybỏad);
-                    int heSoThu2;
+                    int soThu2;
                     while (true)
                     {
-                        Console.Write("Nhap he so b: ");
+                        Console.Write("Nhap so thu 2: ");
                         inputFromKeybỏad = Console.ReadLine();
 
                         if (string.IsNullOrEmpty(inputFromKeybỏad))
@@ -40,7 +39,7 @@ namespace ConsoleApp01
 
                         if (long.TryParse(inputFromKeybỏad, out long heSoThu2Value) && heSoThu2Value <= int.MaxValue && heSoThu2Value >= int.MinValue)
                         {
-                            heSoThu2 = (int)heSoThu2Value;
+                            soThu2 = (int)heSoThu2Value;
                             break;
                         }
                         else
@@ -50,7 +49,7 @@ namespace ConsoleApp01
                         }
                     }
 
-                    int sum = a + heSoThu2;
+                    int sum = soThuNhat + soThu2;
                     Console.Write($"Tong hai so: {sum}");
                     break;
                 }
