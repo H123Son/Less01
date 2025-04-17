@@ -59,7 +59,6 @@ namespace ConsoleApp01
                     Console.WriteLine("Gia tri nhap vao khong hop le. Vui long nhap gia tri so <= 2,147,483,647 & >= -2,147,483,648 ");
                     continue;
                 }
-
             }
         }
     }
