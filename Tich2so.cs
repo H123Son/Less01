@@ -11,24 +11,22 @@ namespace ConsoleApp01
         public void TichHaiSo_Main()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            // tổng hai số
             var inputFromKeybỏad = "";
             while (true)
             {
-                Console.Write(" Nhap he so a: ");
+                Console.Write(" Nhap so thu nhat: ");
                 inputFromKeybỏad = Console.ReadLine();
                 if (string.IsNullOrEmpty(inputFromKeybỏad))
                 {
                     Console.Write("Ko dc bo trong khi nhap");
                     continue;
                 }
-                if (int.TryParse(inputFromKeybỏad, out int a))
+                if (int.TryParse(inputFromKeybỏad, out int soThuNhat))
                 {
-                    int heSoThu1 = Convert.ToInt32(inputFromKeybỏad);
                     int heSoThu2;
                     while (true)
                     {
-                        Console.Write("Nhap he so b: ");
+                        Console.Write("Nhap so thu 2: ");
                         inputFromKeybỏad = Console.ReadLine();
                         if (string.IsNullOrEmpty(inputFromKeybỏad))
                         {
@@ -46,7 +44,7 @@ namespace ConsoleApp01
                             continue;
                         }
                     }
-                    int tich = a * heSoThu2;
+                    int tich = soThuNhat * heSoThu2;
                     Console.Write($"Tich hai so: {tich}");
                     break;
                 }
